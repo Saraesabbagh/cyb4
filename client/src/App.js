@@ -15,27 +15,22 @@ function App() {
       // Reset the score to 0 and question counter to 0 when starting a new round
       // setScore(0);
       // setQuestionCounter(0);
-
-      // Fetch new data for the next round
       const response = await axios.post(
         "http://localhost:5001/api/start-round"
       );
       const { characters, selectedCharacter } = response.data;
 
-      // Include the correct answer in the options
       const allOptions = characters.map((character) => character.name);
       const shuffledOptions = shuffleArray(allOptions);
-      const optionsWithCorrectAnswer = shuffledOptions.slice(0, 3); // Choose the first 3
-      optionsWithCorrectAnswer.push(selectedCharacter.name); // Add the correct answer
+      const optionsWithCorrectAnswer = shuffledOptions.slice(0, 3);
+      optionsWithCorrectAnswer.push(selectedCharacter.name);
 
-      // Set the state for the new round
       setOptions(shuffleArray(optionsWithCorrectAnswer));
       setSelectedCharacter(selectedCharacter);
     } catch (error) {
       console.error("Error starting a new round:", error);
       setError("Error starting a new round");
     } finally {
-      // Reset loading state
       setLoading(false);
     }
   };
@@ -53,10 +48,8 @@ function App() {
     setLoading(true);
 
     try {
-      // Check if the selected option is correct before making the API call
       const isCorrect = selectedOption === selectedCharacter.name;
 
-      // If the answer is correct, increment the score
       if (isCorrect) {
         setScore((prevScore) => prevScore + 1);
         alert("Correct!");
@@ -64,25 +57,20 @@ function App() {
         alert(`Incorrect! The correct answer is: ${selectedCharacter.name}`);
       }
 
-      // Increment the question counter
       setQuestionCounter((prevCounter) => prevCounter + 1);
 
-      // If the user has answered 5 questions, reveal the score
       if (questionCounter === 4) {
         alert(`You answered 5 questions. Your score is: ${score}`);
-        // Start a new round after revealing the score
 
         startNewRound();
         setScore(0);
         setQuestionCounter(0);
       } else {
-        // Make the API call to submit the answer
         await axios.post("http://localhost:5001/api/submit-answer", {
           selectedCharacter,
           userAnswer: selectedOption,
         });
 
-        // Start a new round after submitting the answer
         startNewRound();
       }
     } catch (error) {
@@ -94,7 +82,6 @@ function App() {
   };
 
   useEffect(() => {
-    // Start a new round when the component mounts
     startNewRound();
   }, []);
 

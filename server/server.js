@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 const port = 5001;
 app.use(cors());
-app.use(express.json()); // Add this line to parse JSON in the request body
+app.use(express.json());
 
 let pageCounter = 1;
 

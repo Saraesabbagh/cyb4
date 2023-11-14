@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./App.css";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -9,6 +10,21 @@ function App() {
   const [score, setScore] = useState(0);
   const [questionCounter, setQuestionCounter] = useState(0);
 
+  function getEmojiForIndex(index) {
+    switch (index) {
+      case 0:
+        return "🔶";
+      case 1:
+        return "🟢";
+
+      case 2:
+        return "⚪";
+      case 3:
+        return "🟥";
+      default:
+        return "❓";
+    }
+  }
   const startNewRound = async () => {
     setLoading(true);
     try {
@@ -94,28 +110,48 @@ function App() {
   }
 
   return (
-    <div>
-      <h1>Guess the Disney Character</h1>
-      <p>Score: {score}</p>
+    <div className="full-page">
+      <div className="title-container">
+        <h1>Guess the Disney Character</h1>
+        <h2>Who is this character?</h2>
+      </div>
       {selectedCharacter && (
         <>
-          <p>Who is this character?</p>
-          <img
-            src={selectedCharacter.imageUrl}
-            alt={selectedCharacter.name}
-            style={{ maxWidth: "200px", maxHeight: "200px" }}
-          />
-          <ul>
+          <div className="imageAnswerDiv">
+            <ul>
+              <li className="score">
+                <div className="score-container">{score}</div>
+              </li>
+              <li>
+                <img
+                  src={selectedCharacter.imageUrl}
+                  alt={selectedCharacter.name}
+                  style={{ width: "400px", maxHeight: "300px" }}
+                />
+              </li>
+              <li>
+                <div className="questions-container">
+                  Questions: {questionCounter} /5{" "}
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <ul className="answerButtonContainer">
             {options.map((option, index) => (
               <li key={index}>
-                <button onClick={() => handleOptionClick(option)}>
-                  {option}
+                <button
+                  className={`answerButtons button${index + 1}`}
+                  onClick={() => handleOptionClick(option)}
+                >
+                  {getEmojiForIndex(index)} {option}
                 </button>
               </li>
             ))}
           </ul>
         </>
       )}
+      <br />
       <button onClick={startNewRound}>Start New Round</button>
     </div>
   );

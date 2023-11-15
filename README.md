@@ -10,8 +10,7 @@ So far out of the techinicals that I have had to do this turned about to be the 
 
 ### Results
 
-Below are a few screen grabs of the final product and a quick video showing the game being played.
-![Screenshot 2023-11-15 at 15 47 29](https://github.com/Saraesabbagh/cyb4/assets/91126259/1756e0f0-aaa7-4c8b-933b-3d92a0bd0805)
+Below is a screen grab of the final product and a quick video showing the game being played.
 ![Screenshot 2023-11-15 at 15 46 53](https://github.com/Saraesabbagh/cyb4/assets/91126259/0b7fd3d4-1adc-4da8-af0f-13cf8f2bdd87)
 
 

@@ -11,11 +11,18 @@ So far out of the techinicals that I have had to do this turned about to be the 
 ### Results
 
 Below are a few screen grabs of the final product and a quick video showing the game being played.
+![Screenshot 2023-11-15 at 15 47 29](https://github.com/Saraesabbagh/cyb4/assets/91126259/1756e0f0-aaa7-4c8b-933b-3d92a0bd0805)
+![Screenshot 2023-11-15 at 15 46 53](https://github.com/Saraesabbagh/cyb4/assets/91126259/0b7fd3d4-1adc-4da8-af0f-13cf8f2bdd87)
+
+
+https://github.com/Saraesabbagh/cyb4/assets/91126259/131873ea-d0c3-4add-9ba8-d28fcfc71379
+
 
 ### Overview
 
 Build a small game where the player needs to correctly guess the film or tv-show of a
 Disney character.
+![example-quiz](https://github.com/Saraesabbagh/cyb4/assets/91126259/ca918e8e-493e-42c8-a00c-95eace530aa0)
 
 - Use an API to get images and characters information, for example
   https://disneyapi.dev/. You do not need to use this exact API.

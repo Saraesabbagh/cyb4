@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
+import Confetti from "./Confetti";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -9,6 +10,10 @@ function App() {
   const [options, setOptions] = useState([]);
   const [score, setScore] = useState(0);
   const [questionCounter, setQuestionCounter] = useState(0);
+  const [showStartButton, setShowStartButton] = useState(true);
+  const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [modalScore, setModalScore] = useState(0);
 
   function getEmojiForIndex(index) {
     switch (index) {
@@ -16,7 +21,6 @@ function App() {
         return "🔶";
       case 1:
         return "🟢";
-
       case 2:
         return "⚪";
       case 3:
@@ -25,12 +29,10 @@ function App() {
         return "❓";
     }
   }
+
   const startNewRound = async () => {
     setLoading(true);
     try {
-      // Reset the score to 0 and question counter to 0 when starting a new round
-      // setScore(0);
-      // setQuestionCounter(0);
       const response = await axios.post(
         "http://localhost:5001/api/start-round"
       );
@@ -43,6 +45,10 @@ function App() {
 
       setOptions(shuffleArray(optionsWithCorrectAnswer));
       setSelectedCharacter(selectedCharacter);
+
+      setShowStartButton(false);
+
+      setIsAnswerCorrect(null);
     } catch (error) {
       console.error("Error starting a new round:", error);
       setError("Error starting a new round");
@@ -68,27 +74,23 @@ function App() {
 
       if (isCorrect) {
         setScore((prevScore) => prevScore + 1);
-        alert("Correct!");
-      } else {
-        alert(`Incorrect! The correct answer is: ${selectedCharacter.name}`);
       }
 
-      setQuestionCounter((prevCounter) => prevCounter + 1);
+      setIsAnswerCorrect(isCorrect);
 
-      if (questionCounter === 4) {
-        alert(`You answered 5 questions. Your score is: ${score}`);
+      setTimeout(() => {
+        setQuestionCounter((prevCounter) => prevCounter + 1);
 
-        startNewRound();
-        setScore(0);
-        setQuestionCounter(0);
-      } else {
-        await axios.post("http://localhost:5001/api/submit-answer", {
-          selectedCharacter,
-          userAnswer: selectedOption,
-        });
+        if (questionCounter === 9) {
+          const finalScore = score + (isCorrect ? 1 : 0);
+          setModalScore(finalScore);
+          setShowModal(true);
+        } else {
+          startNewRound();
+        }
 
-        startNewRound();
-      }
+        setIsAnswerCorrect(null);
+      }, 2000);
     } catch (error) {
       console.error("Error handling answer:", error);
       setError("Error handling answer");
@@ -97,9 +99,23 @@ function App() {
     }
   };
 
+  const handlePlayAgain = () => {
+    startNewRound();
+    setScore(0);
+    setQuestionCounter(0);
+    setShowModal(false);
+  };
+
   useEffect(() => {
     startNewRound();
   }, []);
+
+  useEffect(() => {
+    if (questionCounter === 10) {
+      setModalScore(score);
+      setShowModal(true);
+    }
+  }, [questionCounter, score]);
 
   if (loading) {
     return <p>Loading...</p>;
@@ -115,7 +131,12 @@ function App() {
         <h1>Guess the Disney Character</h1>
         <h2>Who is this character?</h2>
       </div>
-      {selectedCharacter && (
+
+      {showStartButton && (
+        <button onClick={startNewRound}>Start New Round</button>
+      )}
+
+      {selectedCharacter && !showStartButton && (
         <>
           <div className="imageAnswerDiv">
             <ul>
@@ -126,16 +147,29 @@ function App() {
                 <img
                   src={selectedCharacter.imageUrl}
                   alt={selectedCharacter.name}
-                  style={{ width: "400px", maxHeight: "300px" }}
+                  style={{ width: "350px", maxHeight: "450px" }}
                 />
               </li>
               <li>
                 <div className="questions-container">
-                  Questions: {questionCounter} /5{" "}
+                  Questions: {questionCounter} /10{" "}
                 </div>
               </li>
             </ul>
           </div>
+
+          {isAnswerCorrect !== null && (
+            <div className="answer-feedback">
+              {isAnswerCorrect ? (
+                <p className="correct-answer">Correct!</p>
+              ) : (
+                <p className="incorrect-answer">
+                  Incorrect! The correct answer is:
+                  <p>{selectedCharacter.name}</p>
+                </p>
+              )}
+            </div>
+          )}
 
           <ul className="answerButtonContainer">
             {options.map((option, index) => (
@@ -151,8 +185,23 @@ function App() {
           </ul>
         </>
       )}
-      <br />
-      <button onClick={startNewRound}>Start New Round</button>
+
+      {showModal && (
+        <>
+          <div className="modal-overlay">
+            <div className="modal">
+              <Confetti />
+              <p className="modal-text">Your final score is:</p>
+              <p>
+                <div className="modal-score-container">{modalScore}</div>
+              </p>
+              <button className="play-again-button" onClick={handlePlayAgain}>
+                Play Again
+              </button>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }

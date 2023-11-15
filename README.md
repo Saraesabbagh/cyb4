@@ -4,7 +4,7 @@
 
 I used Render to host the server and Vercel to host the frontend of this Quiz app. By doing this it is now live on the internet for you to test out. Good luck!
 You can reach the app at the following link;
-https://cyb4.vercel.app/
+<a src="https://cyb4.vercel.app/" target="_blank">https://cyb4.vercel.app/</a>
 
 Below is a screen grab of the final product and a quick video showing the game being played.
 ![Screenshot 2023-11-15 at 15 46 53](https://github.com/Saraesabbagh/cyb4/assets/91126259/0b7fd3d4-1adc-4da8-af0f-13cf8f2bdd87)

@@ -47,9 +47,9 @@ these criteria so we can understand your front and backend skills.
   ```
 - Then run the server by using:
 
-```
-node server.js
-```
+  ```
+  node server.js
+  ```
 
 - cd into client install packages using:
   ```
@@ -57,6 +57,6 @@ node server.js
   ```
 - Then run the server by using:
 
-```
-npm start
-```
+  ```
+  npm start
+  ```

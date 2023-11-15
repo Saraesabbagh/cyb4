@@ -1,4 +1,4 @@
-# cyb4
+# cyb technical
 
 ### Overview
 
@@ -37,3 +37,26 @@ these criteria so we can understand your front and backend skills.
   - Receives the submission request from your frontend - Redirects the user to the next round
   - You may use in-memory session storage (i.e. you do not need to use a
     persistence service like Redis)
+
+### Installation
+
+- clone the repo
+- cd into server install packages using:
+  ```
+  npm install
+  ```
+- Then run the server by using:
+
+```
+node server.js
+```
+
+- cd into client install packages using:
+  ```
+  npm install
+  ```
+- Then run the server by using:
+
+```
+npm start
+```

@@ -141,6 +141,7 @@ function App() {
           <div className="imageAnswerDiv">
             <ul>
               <li className="score">
+                <h4>Score:</h4>
                 <div className="score-container">{score}</div>
               </li>
               <li>
@@ -151,8 +152,9 @@ function App() {
                 />
               </li>
               <li>
+                <h4>Questions:</h4>
                 <div className="questions-container">
-                  Questions: {questionCounter} /10{" "}
+                  {questionCounter} /10{" "}
                 </div>
               </li>
             </ul>

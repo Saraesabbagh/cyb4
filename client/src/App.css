@@ -10,6 +10,12 @@
   padding-bottom: 10px;
   /* color: red; */
 }
+h4{
+  color: black;
+  font-weight: bolder;
+  font-size: x-large;
+
+}
 
 .imageAnswerDiv {
   display: flex;
@@ -47,7 +53,7 @@
 .questions-container {
   padding: 30px;
   border-radius: 50px;
-  margin-top: 80px;
+  margin-top: 60px;
   color: black;
   font-weight: bolder;
   font-size: x-large;

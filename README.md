@@ -1,5 +1,12 @@
 # cyb technical
 
+### Results
+
+Below is a screen grab of the final product and a quick video showing the game being played.
+![Screenshot 2023-11-15 at 15 46 53](https://github.com/Saraesabbagh/cyb4/assets/91126259/0b7fd3d4-1adc-4da8-af0f-13cf8f2bdd87)
+
+https://github.com/Saraesabbagh/cyb4/assets/91126259/131873ea-d0c3-4add-9ba8-d28fcfc71379
+
 ### Comments about technical
 
 So far out of the techinicals that I have had to do this turned about to be the most fun. However there were some areas where given more time I would like to improve on.
@@ -8,16 +15,7 @@ So far out of the techinicals that I have had to do this turned about to be the 
 - REFACTORING- I built everything first so that it would work, with a goal to refactor out the components into their own atomic elements that are then called into the app. I ran out of time to do so. The result whilst is a working app, it's not as clean as I would like to show.
 - LEARNINGS- This task tested me to not just build a basic front end but to insist that api calls were dealt with on a backend. I have built front end apps before so this was a way to use the knowledge I already had but to build on it further to allow for a full full stack application to be built.
 
-### Results
-
-Below is a screen grab of the final product and a quick video showing the game being played.
-![Screenshot 2023-11-15 at 15 46 53](https://github.com/Saraesabbagh/cyb4/assets/91126259/0b7fd3d4-1adc-4da8-af0f-13cf8f2bdd87)
-
-
-https://github.com/Saraesabbagh/cyb4/assets/91126259/131873ea-d0c3-4add-9ba8-d28fcfc71379
-
-
-### Overview
+### Overview of task instructions
 
 Build a small game where the player needs to correctly guess the film or tv-show of a
 Disney character.

@@ -1,5 +1,17 @@
 # cyb technical
 
+### Comments about technical
+
+So far out of the techinicals that I have had to do this turned about to be the most fun. However there were some areas where given more time I would like to improve on.
+
+- TESTING - I'm not happy with my test coverage. I came into some difficulty installing jest testing from scratch so wasn't able to complete the stretch goal that I would have hoped for.
+- REFACTORING- I built everything first so that it would work, with a goal to refactor out the components into their own atomic elements that are then called into the app. I ran out of time to do so. The result whilst is a working app, it's not as clean as I would like to show.
+- LEARNINGS- This task tested me to not just build a basic front end but to insist that api calls were dealt with on a backend. I have built front end apps before so this was a way to use the knowledge I already had but to build on it further to allow for a full full stack application to be built.
+
+### Results
+
+Below are a few screen grabs of the final product and a quick video showing the game being played.
+
 ### Overview
 
 Build a small game where the player needs to correctly guess the film or tv-show of a
@@ -60,15 +72,3 @@ these criteria so we can understand your front and backend skills.
   ```
   npm start
   ```
-
-### Comments about technical
-
-So far out of the techinicals that I have had to do this turned about to be the most fun. However there were some areas where given more time I would like to improve on.
-
-- TESTING - I'm not happy with my test coverage. I came into some difficulty installing jest testing from scratch so wasn't able to complete the stretch goal that I would have hoped for.
-- REFACTORING- I built everything first so that it would work, with a goal to refactor out the components into their own atomic elements that are then called into the app. I ran out of time to do so. The result whilst is a working app, it's not as clean as I would like to show.
-- LEARNINGS- This task tested me to not just build a basic front end but to insist that api calls were dealt with on a backend. I have built front end apps before so this was a way to use the knowledge I already had but to build on it further to allow for a full full stack application to be built.
-
-### Results
-
-Below are a few screen grabs of the final product and a quick video showing the game being played.

@@ -9,7 +9,6 @@ const mockData = {
   characters: [
     { name: "Mickey Mouse", imageUrl: "mickey.jpg" },
     { name: "Donald Duck", imageUrl: "donald.jpg" },
-    // Add more characters as needed
   ],
   selectedCharacter: { name: "Mickey Mouse", imageUrl: "mickey.jpg" },
 };
@@ -32,7 +31,6 @@ describe("App component", () => {
     expect(getByAltText("Mickey Mouse")).toBeInTheDocument();
     expect(getByText("Mickey Mouse")).toBeInTheDocument();
     expect(getByText("Donald Duck")).toBeInTheDocument();
-    // Add more assertions as needed
   });
 
   test("increments the score on correct answer", async () => {
@@ -60,7 +58,7 @@ describe("App component", () => {
     expect(
       getByText("You answered 5 questions. Your score is: 5")
     ).toBeInTheDocument();
-    expect(axios.post).toHaveBeenCalledTimes(6); // 1 start-round + 5 submit-answer
+    expect(axios.post).toHaveBeenCalledTimes(6);
     expect(getByText("Score: 0")).toBeInTheDocument();
   });
 });

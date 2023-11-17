@@ -11,6 +11,7 @@ I was able to make the app mobile responisve so should be a great user experienc
 
 Below is a screen grab of the final product and a quick video showing the game being played.
 ![Screenshot 2023-11-15 at 15 46 53](https://github.com/Saraesabbagh/cyb4/assets/91126259/0b7fd3d4-1adc-4da8-af0f-13cf8f2bdd87)
+![Screenshot 2023-11-17 at 09 52 39](https://github.com/Saraesabbagh/cyb4/assets/91126259/51a87092-5e3d-4a8f-8312-b34b8592ec1c)
 
 https://github.com/Saraesabbagh/cyb4/assets/91126259/131873ea-d0c3-4add-9ba8-d28fcfc71379
 

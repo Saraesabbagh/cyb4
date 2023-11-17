@@ -8,13 +8,11 @@
   background-color: white;
   box-shadow: 0px 5px 5px lightgrey;
   padding-bottom: 10px;
- 
 }
-h4{
+h4 {
   color: black;
   font-weight: bolder;
   font-size: x-large;
-
 }
 
 .imageAnswerDiv {
@@ -196,4 +194,23 @@ ul {
 
 .play-again-button:hover {
   transform: scale(1.3);
+}
+@media only screen and (max-width: 600px) {
+  .imageAnswerDiv li {
+    padding-left: 0;
+    padding: 5px;
+  }
+
+  .imageAnswerDiv img {
+    max-width: 80%;
+  }
+
+  .score-container,
+  .questions-container {
+    font-size: small;
+  }
+
+  .answerButtonContainer li {
+    flex: 0 0 100%;
+  }
 }

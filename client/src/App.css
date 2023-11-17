@@ -200,6 +200,18 @@ ul {
     padding-left: 0;
     padding: 5px;
   }
+  h4 {
+    font-size: medium;
+  }
+  .score-container {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .questions-container {
+    margin-top: 30px;
+  }
 
   .imageAnswerDiv img {
     max-width: 80%;
@@ -212,5 +224,18 @@ ul {
 
   .answerButtonContainer li {
     flex: 0 0 100%;
+    font-size: medium;
+  }
+  .answerButtons {
+    padding: 15px;
+    font-size: medium;
+    color: #fff;
+    text-align: left;
+    padding-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin: 2px;
+    border-radius: 5px;
+    border: none;
   }
 }

@@ -7,6 +7,8 @@ You can reach the app at the following link;
 
 <a href="https://cyb4.vercel.app/" target="_blank">Play the game!</a>
 
+I was able to make the app mobile responisve so should be a great user experience whether you are playing on a mobile device or a desktop.
+
 Below is a screen grab of the final product and a quick video showing the game being played.
 ![Screenshot 2023-11-15 at 15 46 53](https://github.com/Saraesabbagh/cyb4/assets/91126259/0b7fd3d4-1adc-4da8-af0f-13cf8f2bdd87)
 
@@ -19,7 +21,8 @@ So far out of the techinicals that I have had to do this turned about to be the 
 - TESTING - I'm not happy with my test coverage. I came into some difficulty installing jest testing from scratch into my react app so wasn't able to complete the stretch goal that I would have hoped for.
 - REFACTORING- I built everything first so that it would work, with a goal to refactor out the components into their own atomic elements that are then called into the app. I ran out of time to do so. The result whilst is a working app, it's not as clean as I would liked to show.
 - LEARNINGS- This task tested me to not just build a basic front end but to insist that api calls were dealt with on a backend. I have built front end apps before so this was a way to use the knowledge I already had but to build on it further to allow for a full full stack application to be built.
-- API- I found this API a bit unreliable as there were two occassions that it went down completely as I was trying to work with it. For a full Prod game I would probably need to find a more reliable API but for the purposes of this game I think it was sufficient. 
+- API- I found this API a bit unreliable as there were two occassions that it went down completely as I was trying to work with it. For a full Prod game I would probably need to find a more reliable API but for the purposes of this game I think it was sufficient.
+- RESPONSIVNESS- Was able to take some time to make it mobile responsive to mobile screens but would have liked to take some time to specify styling for other screen sizes like tablets.
 
 ### Overview of task instructions
 

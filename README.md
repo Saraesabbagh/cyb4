@@ -7,7 +7,7 @@ You can reach the app at the following link;
 
 <a href="https://cyb4.vercel.app/" target="_blank">Play the game!</a>
 
-If you are unable to connect to the game please check the status of the api by following this link 
+If you are unable to connect to the game please check the status of the api by following this link. If it is down please try and play the game later. 
 
 <a href="[https://cyb4.vercel.app/](https://status.disneyapi.dev/)" target="_blank">https://status.disneyapi.dev/</a>
 

@@ -7,6 +7,10 @@ You can reach the app at the following link;
 
 <a href="https://cyb4.vercel.app/" target="_blank">Play the game!</a>
 
+If you are unable to connect to the game please check the status of the api by following this link 
+
+<a href="[https://cyb4.vercel.app/](https://status.disneyapi.dev/)" target="_blank">[Play the game!](https://status.disneyapi.dev/)</a>
+
 I was able to make the app mobile responisve so should be a great user experience whether you are playing on a mobile device or a desktop.
 
 Below is a screen grab of the final product and a quick video showing the game being played.

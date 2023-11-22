@@ -7,7 +7,7 @@ You can reach the app at the following link;
 
 <a href="https://cyb4.vercel.app/" target="_blank">Play the game!</a>
 
-If you are unable to connect to the game please check the status of the api by following this link. If it is down please try and play the game later. 
+If you are unable to connect to the game please check the status of the api by following this link. If it is down please try and play the game later.
 
 <a href="[https://cyb4.vercel.app/](https://status.disneyapi.dev/)" target="_blank">https://status.disneyapi.dev/</a>
 
@@ -28,6 +28,7 @@ So far out of the techinicals that I have had to do this turned about to be the 
 - LEARNINGS- This task tested me to not just build a basic front end but to insist that api calls were dealt with on a backend. I have built front end apps before so this was a way to use the knowledge I already had but to build on it further to allow for a full full stack application to be built.
 - API- I found this API a bit unreliable as there were two occassions that it went down completely as I was trying to work with it. For a full Prod game I would probably need to find a more reliable API but for the purposes of this game I think it was sufficient.
 - RESPONSIVNESS- Was able to take some time to make it mobile responsive to mobile screens but would have liked to take some time to specify styling for other screen sizes like tablets.
+- CONFETTI- I wasted a lot of time building my own confetti by hand. I have left the files in so you can see what i was trying to achieve. I then discovered there were already a few light weight packages available for me to leverage that would have the same, if not better effect on the final result. I could have saved a lot of time if i just looked for a package to begin with rather than trying to make my own. Although I hope by leaving the files in it shows some creativity of mind, even if I was able to find a better solution later on.
 
 ### Overview of task instructions
 

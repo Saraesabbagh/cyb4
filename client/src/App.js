@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
-import Confetti from "./Confetti";
+import Confetti from "react-confetti";
+import useWindowSize from "react-use/lib/useWindowSize";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -14,6 +15,7 @@ function App() {
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [modalScore, setModalScore] = useState(0);
+  const { width, height } = useWindowSize();
 
   function getEmojiForIndex(index) {
     switch (index) {
@@ -192,7 +194,7 @@ function App() {
         <>
           <div className="modal-overlay">
             <div className="modal">
-              <Confetti />
+              <Confetti width={width} height={height} />
               <p className="modal-text">Your final score is:</p>
               <p>
                 <div className="modal-score-container">{modalScore}</div>

@@ -6,12 +6,14 @@ require("dotenv").config();
 const app = express();
 const port = 5001;
 
+const allowedOrigins = [
+  "http://localhost:3000", // for local development
+  "https://cyb4-l0xv0ecfj-saraesabbagh.vercel.app", // replace with your Vercel domain
+];
+
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000", // for local development
-      "https://cyb4-l0xv0ecfj-saraesabbagh.vercel.app", // replace with your production URL
-    ],
+    origin: allowedOrigins,
   })
 );
 app.use(express.json());

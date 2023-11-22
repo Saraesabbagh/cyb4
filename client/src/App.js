@@ -16,10 +16,7 @@ function App() {
   const [showModal, setShowModal] = useState(false);
   const [modalScore, setModalScore] = useState(0);
   const { width, height } = useWindowSize();
-  const baseURL =
-    process.env.NODE_ENV === "development"
-      ? process.env.REACT_APP_BACKEND_URL_LOCAL
-      : process.env.REACT_APP_BACKEND_URL_PROD;
+  const baseURL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5001";
 
   function getEmojiForIndex(index) {
     switch (index) {

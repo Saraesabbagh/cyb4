@@ -1,10 +1,16 @@
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
 const port = 5001;
-app.use(cors());
+
+app.use(
+  cors({
+    origin: true,
+  })
+);
 app.use(express.json());
 
 app.get("/api/disney-characters", async (req, res) => {

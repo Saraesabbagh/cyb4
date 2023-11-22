@@ -16,6 +16,10 @@ function App() {
   const [showModal, setShowModal] = useState(false);
   const [modalScore, setModalScore] = useState(0);
   const { width, height } = useWindowSize();
+  const baseURL =
+    process.env.NODE_ENV === "development"
+      ? process.env.REACT_APP_BACKEND_URL_LOCAL
+      : process.env.REACT_APP_BACKEND_URL_PROD;
 
   function getEmojiForIndex(index) {
     switch (index) {
@@ -35,9 +39,8 @@ function App() {
   const startNewRound = async () => {
     setLoading(true);
     try {
-      const response = await axios.post(
-        "http://localhost:5001/api/start-round"
-      );
+      const response = await axios.post(`${baseURL}/api/start-round`);
+
       const { characters, selectedCharacter } = response.data;
 
       const allOptions = characters.map((character) => character.name);

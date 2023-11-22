@@ -39,7 +39,9 @@ function App() {
   const startNewRound = async () => {
     setLoading(true);
     try {
+      console.log(baseURL);
       const response = await axios.post(`${baseURL}/api/start-round`);
+      // const response = await axios.post(`${baseURL}/api/start-round`);
 
       const { characters, selectedCharacter } = response.data;
 

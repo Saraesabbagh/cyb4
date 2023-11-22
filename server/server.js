@@ -8,7 +8,10 @@ const port = 5001;
 
 app.use(
   cors({
-    origin: true,
+    origin: [
+      "http://localhost:3000", // for local development
+      "https://cyb4-l0xv0ecfj-saraesabbagh.vercel.app", // replace with your production URL
+    ],
   })
 );
 app.use(express.json());

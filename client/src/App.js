@@ -39,10 +39,10 @@ function App() {
   const startNewRound = async () => {
     setLoading(true);
     try {
-      console.log(baseURL);
-      const response = await axios.post(`${baseURL}/api/start-round`);
-      // const response = await axios.post(`${baseURL}/api/start-round`);
+      const url = `${baseURL}/api/start-round`;
+      console.log("Requesting:", url);
 
+      const response = await axios.post(url);
       const { characters, selectedCharacter } = response.data;
 
       const allOptions = characters.map((character) => character.name);

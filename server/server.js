@@ -8,7 +8,7 @@ const port = 5001;
 
 const allowedOrigins = [
   "http://localhost:3000", // for local development
-  "https://cyb4.vercel.app", // replace with your Vercel domain
+  "https://cyb4-jb1luitwt-saraesabbagh.vercel.app", // replace with your Vercel domain
 ];
 
 app.use(

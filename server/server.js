@@ -8,12 +8,14 @@ const port = 5001;
 
 const allowedOrigins = [
   "http://localhost:3000", // for local development
-  "https://cyb4-l0xv0ecfj-saraesabbagh.vercel.app", // replace with your Vercel domain
+  "https://cyb4.vercel.app", // replace with your Vercel domain
 ];
 
 app.use(
   cors({
     origin: allowedOrigins,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
   })
 );
 app.use(express.json());
